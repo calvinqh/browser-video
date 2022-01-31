@@ -1,0 +1,51 @@
+[package]
+name = "video-processor"
+version = "0.1.0"
+authors = ["calvinqh <calvinquach@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["console_error_panic_hook"]
+
+[dependencies.wasm-bindgen]
+version = "0.2"
+features = [ "serde-serialize" ]
+
+[dependencies.console_error_panic_hook]
+version = "0.1.6"
+optional = true
+
+[dependencies.web-sys]
+version = "0.3"
+features = [
+	"MediaDevices", "MediaStreamConstraints",
+	"MediaDeviceInfo", "MediaStream",
+	"HtmlMediaElement", "HtmlVideoElement",
+	"HtmlCanvasElement",
+	"CanvasRenderingContext2d", "ImageData",
+	"Document", "Element",
+	"Window","Navigator",
+	"console"
+]
+
+[dependencies.wee_alloc]
+version = "0.4.5"
+optional = true
+
+[dependencies.wasm-bindgen-futures]
+version = "0.4"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.13"
+
+[dependencies.serde]
+version = "1.0"
+features = [ "derive" ]
+
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"

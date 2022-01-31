@@ -1,0 +1,5 @@
+build/
+coverage/
+.next/
+video-processor/target/
+video-processor/pkg/

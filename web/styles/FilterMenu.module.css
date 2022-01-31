@@ -1,0 +1,34 @@
+.container {
+  background-color: #8a7968;
+  flex: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 80;
+  margin-top: 0;
+}
+
+.menu {
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  justify-content: center;
+  align-items: center;
+  padding-inline-start: 0px;
+  z-index: 100;
+}
+
+.menuItem {
+  display: inline-block;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.menuItem:hover {
+  background-color: #c3a995;
+  opacity: 50%;
+}
